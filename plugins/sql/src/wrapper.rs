@@ -65,7 +65,7 @@ pub enum DbPool {
 
 // private methods
 impl DbPool {
-    pub(crate) async fn connect<R: Runtime>(
+    pub async fn connect<R: Runtime>(
         conn_url: &str,
         _app: &AppHandle<R>,
     ) -> Result<Self, crate::Error> {
